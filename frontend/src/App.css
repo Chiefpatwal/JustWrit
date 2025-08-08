@@ -1,0 +1,111 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #1e1e1e;
+  --text-color: #ffffff;
+  --accent-color: #00bfff;
+  --card-bg: #2a2a2a;
+  --border-color: #3a3a3a;
+}
+
+/* Body and App Layout */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.App {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Navigation Styles */
+nav {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+/* Button Styles */
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Card Hover Effects */
+div[style*="backgroundColor: 'white'"] {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+  transition: all 0.3s ease !important;
+}
+
+div[style*="backgroundColor: 'white'"]:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Form Styles */
+input {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(0, 191, 255, 0.2);
+}
+
+/* Hero Section */
+.hero-gradient {
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* Responsive Grid Adjustment */
+@media (max-width: 768px) {
+  div[style*="display: grid"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  div[style*="gridTemplateColumns"] {
+    grid-template-columns: 1fr !important;
+  }
+}
